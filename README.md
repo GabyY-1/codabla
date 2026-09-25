@@ -1,60 +1,41 @@
 # Codabla
 
-Codabla est un assistant IA spécialisé dans le développement, conçu comme une vraie interface de chat pour créer, corriger, expliquer et améliorer du code.
+Codabla est un espace de développement web inspiré des IDE cloud modernes, avec un assistant IA intégré au projet.
 
-## Fonctionnalités
+## Fonctionnalités actuelles
 
-- réponses en streaming ;
-- historique local des discussions ;
-- recherche dans les conversations ;
-- modes Chat, Créer, Debug, Expliquer et Améliorer ;
-- import de fichiers de code texte ;
-- Markdown et blocs de code avec copie ;
-- copie et régénération des réponses ;
-- export d'une discussion en Markdown ;
-- arrêt d'une génération en cours ;
-- interface responsive ordinateur et mobile ;
-- backend sécurisé : la clé OpenRouter n'est jamais envoyée au navigateur.
+- onboarding avec trois modes : manuel, copilote et génération par IA
+- explorateur de fichiers
+- éditeur Monaco
+- onglets de fichiers
+- aperçu HTML/CSS/JS intégré
+- terminal navigateur léger
+- assistant Codabla AI avec contexte du projet
+- modifications multi-fichiers par IA
+- sauvegarde locale automatique
+- interface sombre type IDE
 
-## Modèle
-
-Par défaut :
-
-```text
-nvidia/nemotron-3-ultra-550b-a55b:free
-```
-
-Le modèle peut être remplacé avec la variable `OPENROUTER_MODEL`.
-
-## Installation
+## Lancer en local
 
 ```bash
 npm install
 npm run dev
 ```
 
-Le projet est ensuite disponible sur `http://localhost:3000`.
+## IA avec OpenRouter
 
-## Variables d'environnement
+Ajoute ces variables sur Vercel :
 
-Crée un fichier `.env.local` :
-
-```env
-OPENROUTER_API_KEY=ta_cle_openrouter
+```
+OPENROUTER_API_KEY=...
 OPENROUTER_MODEL=nvidia/nemotron-3-ultra-550b-a55b:free
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
+APP_URL=https://codabla.horibli.com
 ```
 
-Sur Vercel :
+La clé OpenRouter reste côté serveur dans `api/chat.js`.
 
-```env
-OPENROUTER_API_KEY=ta_cle_openrouter
-OPENROUTER_MODEL=nvidia/nemotron-3-ultra-550b-a55b:free
-NEXT_PUBLIC_SITE_URL=https://codabla.horibli.com
+## Build
+
+```bash
+npm run build
 ```
-
-Ne mets jamais `OPENROUTER_API_KEY` dans un fichier envoyé sur GitHub.
-
-## Domaine
-
-Production : `https://codabla.horibli.com`
