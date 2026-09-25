@@ -37,7 +37,7 @@ export function MarkdownMessage({ content }: { content: string }) {
           const value = String(children).replace(/\n$/, "");
           const match = /language-([\w-]+)/.exec(className || "");
 
-          if (className) {
+          if (className || value.includes("\n")) {
             return <CodeBlock value={value} language={match?.[1]} />;
           }
 
