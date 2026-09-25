@@ -20,7 +20,6 @@ import {
   Search,
   Settings,
   Sparkles,
-  TerminalSquare,
   X
 } from "lucide-react";
 import "./styles.css";
