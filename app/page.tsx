@@ -752,7 +752,7 @@ export default function Home() {
                     type="file"
                     multiple
                     onChange={addFiles}
-                    accept=".txt,.md,.html,.css,.js,.jsx,.ts,.tsx,.json,.py,.java,.c,.cpp,.h,.sql,.xml,.yml,.yaml,.env,.gitignore"
+                    accept=".txt,.md,.html,.css,.js,.jsx,.ts,.tsx,.json,.py,.java,.c,.cpp,.h,.sql,.xml,.yml,.yaml,.gitignore"
                   />
 
                   <button
